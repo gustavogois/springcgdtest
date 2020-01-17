@@ -9,6 +9,6 @@ public class Euro {
     }
 
     public void times(int multiplier) {
-        this.amount = this.amount * multiplier;
+        this.amount *= multiplier;
     }
 }

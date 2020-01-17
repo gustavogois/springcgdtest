@@ -15,5 +15,9 @@ public class MoneyTest {
 
         assertEquals(10, cinco.amount);
 
+        cinco.times(3);
+
+        assertEquals(15, cinco.amount);
+
     }
 }

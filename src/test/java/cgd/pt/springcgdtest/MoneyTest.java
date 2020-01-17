@@ -20,4 +20,10 @@ public class MoneyTest {
         assertEquals(15, result.amount);
 
     }
+
+    @Test
+    void equalTest() {
+        assertEquals(new Euro(10), new Euro(10));
+    }
+
 }

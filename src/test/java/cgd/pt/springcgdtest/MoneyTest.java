@@ -11,13 +11,13 @@ public class MoneyTest {
 
         Euro cinco = new Euro(5);
 
-        cinco.times(2);
+        Euro result = cinco.times(2);
 
-        assertEquals(10, cinco.amount);
+        assertEquals(10, result.amount);
 
-        cinco.times(3);
+        result = cinco.times(3);
 
-        assertEquals(15, cinco.amount);
+        assertEquals(15, result.amount);
 
     }
 }

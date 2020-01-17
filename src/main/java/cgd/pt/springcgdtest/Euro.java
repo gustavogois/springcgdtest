@@ -8,7 +8,9 @@ public class Euro {
         this.amount = amount;
     }
 
-    public void times(int multiplier) {
-        this.amount *= multiplier;
+    public Euro times(int multiplier) {
+
+        return new Euro(amount * multiplier);
+
     }
 }

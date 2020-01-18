@@ -32,7 +32,7 @@ public class Money {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || this.currency != ((Money)o).currency) return false;
         Money money = (Money) o;
         return amount == money.amount &&
                 currency.equals(money.currency);
@@ -50,4 +50,5 @@ public class Money {
                 ", currency='" + currency + '\'' +
                 '}';
     }
+
 }

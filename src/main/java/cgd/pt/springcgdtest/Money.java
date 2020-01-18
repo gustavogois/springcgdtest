@@ -2,7 +2,7 @@ package cgd.pt.springcgdtest;
 
 import java.util.Objects;
 
-public class Money {
+public abstract class Money {
 
     protected int amount;
 

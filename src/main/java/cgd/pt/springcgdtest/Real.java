@@ -2,22 +2,19 @@ package cgd.pt.springcgdtest;
 
 public class Real extends Money {
 
-    private String currency;
-
-    public Real(int amount) {
+    public Real(int amount, String currency) {
         this.amount = amount;
-        this.currency = "R$";
+        this.currency = currency;
     }
 
     @Override
     public String currency() {
-        currency = "R$";
         return currency;
     }
 
     public Money times(int multiplier) {
 
-        return new Real(amount * multiplier);
+        return Money.real(amount * multiplier);
     }
 
 }

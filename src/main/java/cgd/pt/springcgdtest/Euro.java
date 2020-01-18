@@ -2,11 +2,9 @@ package cgd.pt.springcgdtest;
 
 public class Euro extends Money {
 
-    private String currency;
-
-    public Euro(int amount) {
+    public Euro(int amount, String currency) {
         this.amount = amount;
-        this.currency = "€";
+        this.currency = currency;
     }
 
     @Override
@@ -16,7 +14,7 @@ public class Euro extends Money {
 
     public Money times(int multiplier) {
 
-        return new Euro(amount * multiplier);
+        return Money.euro(amount * multiplier);
     }
 
 }

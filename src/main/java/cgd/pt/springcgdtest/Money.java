@@ -5,17 +5,18 @@ import java.util.Objects;
 public abstract class Money {
 
     protected int amount;
+    protected String currency;
 
     public abstract String currency();
 
     public abstract Money times(int amount);
 
     public static Euro euro(int amount) {
-        return new Euro(amount);
+        return new Euro(amount, "€");
     }
 
     public static Real real(int amount) {
-        return new Real(amount);
+        return new Real(amount, "R$");
     }
 
     @Override

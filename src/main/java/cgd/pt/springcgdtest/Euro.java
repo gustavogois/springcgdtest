@@ -6,6 +6,11 @@ public class Euro extends Money {
         this.amount = amount;
     }
 
+    @Override
+    public String currency() {
+        return "€";
+    }
+
     public Money times(int multiplier) {
 
         return new Euro(amount * multiplier);

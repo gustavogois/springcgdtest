@@ -49,5 +49,6 @@ public class MoneyTest {
     @Test
     void testCurrency() {
         assertEquals("€", Money.euro(1).currency());
+        assertEquals("R$", Money.real(1).currency());
     }
 }

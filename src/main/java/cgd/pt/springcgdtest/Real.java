@@ -6,6 +6,11 @@ public class Real extends Money {
         this.amount = amount;
     }
 
+    @Override
+    public String currency() {
+        return "R$";
+    }
+
     public Money times(int multiplier) {
 
         return new Real(amount * multiplier);

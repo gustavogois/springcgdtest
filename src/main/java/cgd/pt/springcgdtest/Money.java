@@ -6,6 +6,8 @@ public abstract class Money {
 
     protected int amount;
 
+    public abstract String currency();
+
     public abstract Money times(int amount);
 
     public static Euro euro(int amount) {
@@ -28,4 +30,5 @@ public abstract class Money {
     public int hashCode() {
         return Objects.hash(amount);
     }
+
 }

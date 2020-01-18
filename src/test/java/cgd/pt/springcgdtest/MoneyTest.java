@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class MoneyTest {
 
     @Test
-    void multiplicationTest() {
+    void multiplicationTestEuro() {
 
         Euro cinco = new Euro(5);
 
@@ -23,9 +23,30 @@ public class MoneyTest {
     }
 
     @Test
-    void equalTest() {
+    void equalTestEuro() {
         assertEquals(new Euro(10), new Euro(10));
         assertNotEquals(new Euro(10), new Euro(20));
+    }
+
+    @Test
+    void multiplicationTestReal() {
+
+        Real cinco = new Real(5);
+
+        Real result = cinco.times(2);
+
+        assertEquals(new Real(10), result);
+
+        result = cinco.times(3);
+
+        assertEquals(new Real(15), result);
+
+    }
+
+    @Test
+    void equalTestReal() {
+        assertEquals(new Real(10), new Real(10));
+        assertNotEquals(new Real(10), new Real(20));
     }
 
 }

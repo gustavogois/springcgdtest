@@ -10,7 +10,7 @@ public class MoneyTest {
     @Test
     void multiplicationTestEuro() {
 
-        Euro cinco = Money.euro(5);
+        Money cinco = Money.euro(5);
 
         assertEquals(Money.euro(10), cinco.times(2));
 
@@ -27,7 +27,7 @@ public class MoneyTest {
     @Test
     void multiplicationTestReal() {
 
-        Real cinco = Money.real(5);
+        Money cinco = Money.real(5);
 
         assertEquals(Money.real(10), cinco.times(2));
 

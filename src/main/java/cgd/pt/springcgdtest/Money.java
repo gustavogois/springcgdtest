@@ -12,6 +12,10 @@ public abstract class Money {
         return new Euro(amount);
     }
 
+    public static Real real(int amount) {
+        return new Real(amount);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

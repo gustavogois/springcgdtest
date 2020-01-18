@@ -2,7 +2,7 @@ package cgd.pt.springcgdtest;
 
 import java.util.Objects;
 
-public abstract class Money {
+public class Money {
 
     protected int amount;
     protected String currency;
@@ -12,14 +12,17 @@ public abstract class Money {
         this.currency = currency;
     }
 
-    public abstract Money times(int amount);
-
     public static Euro euro(int amount) {
         return new Euro(amount, "€");
     }
 
     public static Real real(int amount) {
         return new Real(amount, "R$");
+    }
+
+    public Money times(int multiplier) {
+
+        return new Money(amount * multiplier, this.currency);
     }
 
     @Override

@@ -6,7 +6,7 @@ public class Real extends Money {
         this.amount = amount;
     }
 
-    public Real times(int multiplier) {
+    public Money times(int multiplier) {
 
         return new Real(amount * multiplier);
     }

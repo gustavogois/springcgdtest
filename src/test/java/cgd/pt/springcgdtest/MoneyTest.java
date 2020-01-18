@@ -29,13 +29,9 @@ public class MoneyTest {
 
         Real cinco = new Real(5);
 
-        Real result = cinco.times(2);
+        assertEquals(new Real(10), cinco.times(2));
 
-        assertEquals(new Real(10), result);
-
-        result = cinco.times(3);
-
-        assertEquals(new Real(15), result);
+        assertEquals(new Real(15), cinco.times(3));
 
     }
 

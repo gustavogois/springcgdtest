@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Euro {
 
-    public int amount;
+    private int amount;
 
     public Euro(int amount) {
         this.amount = amount;

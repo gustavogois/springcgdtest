@@ -3,6 +3,7 @@ package cgd.pt.springcgdtest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class MoneyTest {
 
@@ -24,6 +25,7 @@ public class MoneyTest {
     @Test
     void equalTest() {
         assertEquals(new Euro(10), new Euro(10));
+        assertNotEquals(new Euro(10), new Euro(20));
     }
 
 }

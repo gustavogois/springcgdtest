@@ -10,18 +10,18 @@ public class MoneyTest {
     @Test
     void multiplicationTestEuro() {
 
-        Euro cinco = new Euro(5);
+        Euro cinco = Money.euro(5);
 
-        assertEquals(new Euro(10), cinco.times(2));
+        assertEquals(Money.euro(10), cinco.times(2));
 
-        assertEquals(new Euro(15), cinco.times(3));
+        assertEquals(Money.euro(15), cinco.times(3));
 
     }
 
     @Test
     void equalTestEuro() {
-        assertEquals(new Euro(10), new Euro(10));
-        assertNotEquals(new Euro(10), new Euro(20));
+        assertEquals(Money.euro(10), Money.euro(10));
+        assertNotEquals(Money.euro(10), Money.euro(20));
     }
 
     @Test

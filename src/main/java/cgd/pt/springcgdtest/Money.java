@@ -6,7 +6,7 @@ public class Money {
 
     protected int amount;
 
-    public static Euro dollar(int amount) {
+    public static Euro euro(int amount) {
         return new Euro(amount);
     }
 

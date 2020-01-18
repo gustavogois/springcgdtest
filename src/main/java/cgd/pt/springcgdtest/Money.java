@@ -25,20 +25,29 @@ public class Money {
         return new Money(amount * multiplier, this.currency);
     }
 
+    public String currency() {
+        return currency;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Money money = (Money) o;
-        return amount == money.amount;
+        return amount == money.amount &&
+                currency.equals(money.currency);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(amount);
+        return Objects.hash(amount, currency);
     }
 
-    public String currency() {
-        return currency;
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }

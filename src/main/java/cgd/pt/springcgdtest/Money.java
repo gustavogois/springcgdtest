@@ -6,6 +6,10 @@ public class Money {
 
     protected int amount;
 
+    public static Euro dollar(int amount) {
+        return new Euro(amount);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

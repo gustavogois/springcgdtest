@@ -6,6 +6,8 @@ public abstract class Money {
 
     protected int amount;
 
+    public abstract Money times(int amount);
+
     public static Euro euro(int amount) {
         return new Euro(amount);
     }

@@ -49,4 +49,9 @@ public class MoneyTest {
         assertNotEquals(new Real(10), new Real(20));
     }
 
+    @Test
+    void equalTestRealEuro() {
+        assertNotEquals(new Real(10), new Euro(10));
+    }
+
 }

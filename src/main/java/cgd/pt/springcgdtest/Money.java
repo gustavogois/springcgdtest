@@ -12,12 +12,12 @@ public class Money {
         this.currency = currency;
     }
 
-    public static Euro euro(int amount) {
-        return new Euro(amount, "€");
+    public static Money euro(int amount) {
+        return new Money(amount, "€");
     }
 
-    public static Real real(int amount) {
-        return new Real(amount, "R$");
+    public static Money real(int amount) {
+        return new Money(amount, "R$");
     }
 
     public Money times(int multiplier) {

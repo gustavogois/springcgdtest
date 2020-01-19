@@ -8,6 +8,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class MoneyTest {
 
     @Test
+    void testSimpleAddition() {
+        Money five = Money.euro(5);
+        Expression expression = five.plus(5);
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(expression, "€");
+
+        assertEquals(10, reduced);
+    }
+
+    @Test
     void multiplicationTestEuro() {
 
         Money cinco = Money.euro(5);

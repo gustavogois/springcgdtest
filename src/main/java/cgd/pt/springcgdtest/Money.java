@@ -29,7 +29,7 @@ public class Money implements Expression {
     }
 
     @Override
-    public Money reduce(String to) {
+    public Money reduce(Bank bank, String to) {
         //return this;
         int rate = (currency.equals("R$") && to.equals("€")) ? 5 : 1;
         return new Money(amount / rate, to);

@@ -3,7 +3,7 @@ package cgd.pt.springcgdtest;
 public class Bank {
 
     public Money reduce(Expression expression, String toCurrency) {
-        return expression.reduce(toCurrency);
+        return expression.reduce(this, toCurrency);
     }
 
     public int rate(String from, String to) {

@@ -9,4 +9,8 @@ public class Bank {
     public int rate(String from, String to) {
         return (from.equals("R$") && to.equals("€")) ? 5 : 1;
     }
+
+    public void addRate(String from, String to, int rate) {
+
+    }
 }

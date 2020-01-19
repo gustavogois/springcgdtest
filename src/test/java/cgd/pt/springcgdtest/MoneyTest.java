@@ -13,17 +13,17 @@ public class MoneyTest {
         Bank bank = new Bank();
         Money reduced = bank.reduce(expression, "€");
 
-        assertEquals(10, reduced);
+        assertEquals(Money.euro(10), reduced);
     }
 
     @Test
     void testStructureSum() {
         Money five = Money.euro(5);
-        Expression expression = five.plus(7);
+        Expression expression = five.plus(Money.euro(7));
         Sum sum = (Sum) expression;
 
-        assertEquals(5, sum.first);
-        assertEquals(7, sum.second);
+        assertEquals(Money.euro(5), sum.first);
+        assertEquals(Money.euro(7), sum.second);
     }
 
     @Test

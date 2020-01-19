@@ -24,8 +24,13 @@ public class Money implements Expression {
         return new Money(amount * multiplier, this.currency);
     }
 
-    public Expression plus(int amount) {
-        return new Money(amount * amount, this.currency);
+    public Expression plus(Money amount) {
+        return new Sum(this, amount);
+    }
+
+    @Override
+    public Money reduce(String to) {
+        return this;
     }
 
     public String currency() {

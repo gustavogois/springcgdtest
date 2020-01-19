@@ -9,4 +9,9 @@ public class Sum implements Expression {
         this.first = first;
         this.second = second;
     }
+
+    public Money reduce(String to) {
+        int amount = first.amount + second.amount;
+        return new Money(amount, to);
+    }
 }

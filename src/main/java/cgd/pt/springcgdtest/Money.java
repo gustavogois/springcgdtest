@@ -51,4 +51,7 @@ public class Money {
                 '}';
     }
 
+    public Expression plus(int amount) {
+        return null;
+    }
 }

@@ -2,7 +2,7 @@ package cgd.pt.springcgdtest;
 
 import java.util.Objects;
 
-public class Money {
+public class Money implements Expression {
 
     protected int amount;
     protected String currency;
@@ -21,8 +21,11 @@ public class Money {
     }
 
     public Money times(int multiplier) {
-
         return new Money(amount * multiplier, this.currency);
+    }
+
+    public Expression plus(int amount) {
+        return new Money(amount * amount, this.currency);
     }
 
     public String currency() {
@@ -51,7 +54,4 @@ public class Money {
                 '}';
     }
 
-    public Expression plus(int amount) {
-        return null;
-    }
 }

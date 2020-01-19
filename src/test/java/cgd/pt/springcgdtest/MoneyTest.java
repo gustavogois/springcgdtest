@@ -1,5 +1,6 @@
 package cgd.pt.springcgdtest;
 
+import com.jayway.jsonpath.internal.function.numeric.Sum;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,12 +10,30 @@ public class MoneyTest {
 
     @Test
     void testSimpleAddition() {
-        Money five = Money.euro(5);
-        Expression expression = five.plus(5);
+        Expression expression = new Sum(Money.euro(5), Money.euro(5));
         Bank bank = new Bank();
         Money reduced = bank.reduce(expression, "€");
 
         assertEquals(10, reduced);
+    }
+
+    @Test
+    void testStructureSum() {
+        Money five = Money.euro(5);
+        Expression expression = five.plus(7);
+        Sum sum = (Sum) expression;
+
+        assertEquals(5, sum.first);
+        assertEquals(7, sum.second);
+    }
+
+    @Test
+    void testReduceMoney() {
+        Money five = Money.euro(1);
+        Bank bank = new Bank();
+        Money result = bank.reduce(five, "€");
+
+        assertEquals(Money.euro(1), result);
     }
 
     @Test

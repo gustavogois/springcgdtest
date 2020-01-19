@@ -1,6 +1,5 @@
 package cgd.pt.springcgdtest;
 
-import com.jayway.jsonpath.internal.function.numeric.Sum;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
